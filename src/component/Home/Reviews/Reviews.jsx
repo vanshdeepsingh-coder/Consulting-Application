@@ -9,14 +9,28 @@ import Spinner from '../../Shared/Spinner/Spinner';
 
 const Reviews = () => {
     SwiperCore.use([Pagination, Autoplay]);
-    const [reviews, setReviews] = useState([])
-    useEffect(() => {
-        fetch('https://immense-river-40491.herokuapp.com/reviews')
-        .then(res => res.json())
-        .then(data => {
-            setReviews(data);
-        })
-    }, [])
+    const [reviews, setReviews] = useState([{
+        name:"Vanshdeep Singh",
+        address:"134/109 Arya Nagar Block 2",
+        description:"Very good consultation app",
+    },{
+        name:"Anand Kumar",
+        address:"102/101 Barbanki Lucknow",
+        description:"User firendly app"
+    },{
+        name:"Suraj Rao",
+        address:"105 Sultanpur Road Lucknow",
+        description:"Amazing and very easy to use consultation app"
+    },{
+        name:"Subrat Yeeshu Kumar",
+        address:"108/76 Cannt Road New Delhi",
+        description:"Best consultation app and team"
+    },{
+        name:"Shubhankar Nath",
+        address:"98 trunk road Banaras",
+        description:"Best services providing platform"
+    }])
+    
     return (
         <section id="testimonial">
             <h4 className="miniTitle text-center">TESTIMONIALS</h4>
