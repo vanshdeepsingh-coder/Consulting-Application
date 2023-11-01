@@ -6,7 +6,8 @@ import Spinner from '../../Shared/Spinner/Spinner';
 const Services = () => {
     const [services, setServices] = useState([{
         name:"Financial Planning Consultation",
-        description:"Receive expert guidance on managing your finances, including budgeting, investment strategies, retirement planning, and wealth management."
+        description:"Receive expert guidance on managing your finances, including budgeting, investment strategies, retirement planning, and wealth management.",
+        price:"50 per consultation"
     },{
         name:"Legal Advice Session",
         description:"Consult with experienced attorneys for legal advice on various matters, such as family law, business contracts, real estate, or personal injury. Get answers to your legal questions and understand your rights.",
