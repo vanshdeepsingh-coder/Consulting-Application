@@ -1,7 +1,5 @@
 import React from 'react';
 import { Col, Row, Tab } from 'react-bootstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import Fade from 'react-reveal/Fade';
 
 const PricingCard = ({data, id}) => {
@@ -24,7 +22,7 @@ const PricingCard = ({data, id}) => {
                                         </div>
                                         <li>
                                             <span className="checkIcon">
-                                            {/* <FontAwesomeIcon icon={faCheckCircle}/> */}
+                                            {}
                                             </span> UI/UX Design.
                                         </li>
                                         <li>

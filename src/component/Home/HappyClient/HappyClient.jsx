@@ -1,7 +1,5 @@
 import React from 'react'
 import './HappyClient.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSmileBeam, faTasks, faHeadset, faUsers } from '@fortawesome/free-solid-svg-icons';
 import CountUp from 'react-countup';
 const HappyClient = () => {
     const workDetails = [

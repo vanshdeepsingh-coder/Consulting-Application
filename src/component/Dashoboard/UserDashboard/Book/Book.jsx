@@ -13,15 +13,9 @@ const Book = () => {
     const [services, setServices] = useState([]);
     const [show, setShow] = useState(true);
 
-    useEffect(() => {
-        axios.get(`https://immense-river-40491.herokuapp.com/services`)
-        .then(res => {
-            setServices(res.data)
-            if(!selectedService.name){
-                dispatch({type: SET_SELECTED_SERVICE, payload: res.data[0]})
-            }
-        })
-    }, [selectedService.name, dispatch])
+    useEffect(()=>{
+        setServices([{name: 'Web Design (Basic)', price:48},{name: 'Web Design (Standard)', price:78},{name: 'Web Design (Premium)', price:98},{name:'Email Marketing (Basic)', price:39},{name:'Email Marketing (Standard)', price:79},{name:'Email Marketing (Premium)', price:99},{name: 'Graphic Design (Basic)', price:36},{name: 'Graphic Design (Standard)', price:56},{name: 'Graphic Design (Premium)', price:86},{name: 'Web Development (Basic)', price:49},{name: 'Web Development (Standard)', price:69},{name: 'Web Development (Premium)', price:89},{name: 'Search Engine Optimization (Basic)', price:44},{name: 'Search Engine Optimization (Standard)', price:77},{name: 'Search Engine Optimization (Premium)', price:88},{name:'UI Design (Basic)',price:45},{name:'UI Design (Standard)',price:75},{name:'UI Design (Premium)',price:95}])
+    },[selectedService.name, dispatch])
 
     const handleSelection = e => {
         const getService = services.find(({name}) => e.target.value === name)
@@ -47,9 +41,6 @@ const Book = () => {
                 <Col md={6} xs={12} className="my-3">
                     <Form.Label style={{ fontWeight: "bold" }}>Service</Form.Label>
                     <select class="form-select" onChange={handleSelection}>
-                        {selectedService.name && 
-                             <option className="activeService" value={selectedService.name}>{selectedService.name}</option> 
-                         } 
                         { 
                          services?.map(({id, name}) => <option key={id} value={name}>{name}</option>) 
                         }
@@ -58,7 +49,7 @@ const Book = () => {
                 <Col md={6} xs={12} className="my-3">
                         <Form.Label style={{ fontWeight: "bold" }}>Price</Form.Label>
                         <div className="priceInput">
-                         {selectedService.price}
+                         {selectedService.price + " $"}
                             </div>
                 </Col>
             </Row>

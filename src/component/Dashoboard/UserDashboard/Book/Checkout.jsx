@@ -94,7 +94,7 @@ const Checkout = () => {
           </Form.Group>
 
           <Form.Group>
-            <Form.Label style={{ fontWeight: "bold" }}>Email</Form.Label>
+            <Form.Label style={{ fontWeight: "bold",marginTop:"20px" }}>Email</Form.Label>
             <Form.Control
               type="text"
               defaultValue={user.email}
@@ -103,7 +103,7 @@ const Checkout = () => {
           </Form.Group>
 
           <Form.Group>
-            <Form.Label style={{ fontWeight: "bold" }}>Address</Form.Label>
+            <Form.Label style={{ fontWeight: "bold",marginTop:"20px" }}>Address</Form.Label>
             <Form.Control
               type="text"
               {...register("address", { required: true })}

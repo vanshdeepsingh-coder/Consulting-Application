@@ -1,26 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
 import { Button } from 'react-bootstrap';
-import React, { useEffect, useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import toast from 'react-hot-toast';
 import swal from 'sweetalert';
 import './BookList.css'
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import ListSkeleton from '../../../Shared/TableOrder/ListSkeleton';
 import { useAppContext } from '../../../../context';
+import { BookingsData } from '../../../BookingsData';
 
 const BookList = () => {
     const { state:{user} } =useAppContext();
     const [bookings, setBookings] = useState([]);
-    const [isUpdated, setIsUpdated] = useState(false);
 
-    useEffect(() => {
-        axios.get(`https://immense-river-40491.herokuapp.com/bookingList?email=${user.email}`)
-        .then(res => setBookings(res.data))
-    },[user.email, isUpdated])
+    useEffect(()=>
+        setBookings(BookingsData)
+    ,[])
 
     const handleDelete = (id, status) => {
-        setIsUpdated(false)
         swal({
             title: `${status === 'Done' ? "Remove" : "Cancel"} Booking?`,
             text: `Are you sure! you want to ${status === 'Done' ? "remove booking from your booking List" : "cancel"}?`,
@@ -31,25 +27,6 @@ const BookList = () => {
           .then( wantDelete => {
             if (wantDelete) {
                 const loading = toast.loading('deleting...Please wait!')
-                axios.delete(`https://immense-river-40491.herokuapp.com/deleteOrder/${id}`)
-                .then(res => {
-                    toast.dismiss(loading)
-                    if(res){
-                        setIsUpdated(true);
-                        toast.success('Your Booking is successfully canceled!');
-                    }
-                    else{
-                        toast.error('Something went wrong, please try again');
-                    }
-                })
-                .catch(err => {
-                    toast.dismiss(loading)
-                    swal({
-                        title: "Failed!",
-                        text: 'Something went wrong, please try again',
-                        icon: "error",
-                      });
-                })
             } 
           });
     }
@@ -69,10 +46,6 @@ const BookList = () => {
                                 </div>
                                 <h6>{serviceName}</h6>
                                 <p>{description}</p>
-                                <Button variant="outline-danger" onClick={() => handleDelete(_id, status)}> 
-                                    <FontAwesomeIcon icon={faTimesCircle}/>
-                                     { status === 'Done' ? 'Remove':'Cancel'}
-                                </Button>
                             </div>
                         </div>)
                     })
