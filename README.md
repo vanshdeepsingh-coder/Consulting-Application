@@ -45,22 +45,15 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    git clone https://github.com/Ujjalzaman/Easy-Consulting-react
    ```
-2. Install NPM packages
+2. Install packages
    ```sh
-   npm install
-   ```
-   or
-   ```sh
-   yarn add
+   flutter devices
    ```
    
 3. Start the project
     ```sh
-   npm start
+   flutter run
    ```
-   or
-   ```sh
-   yarn start
    ```
  <p align="left">For this project you have to create firebase console for authentication , mongodb for database and stripe for payment gateway.</p>
  <p>After then put all the credential env file respectly for backend keep them in root folder</p>
