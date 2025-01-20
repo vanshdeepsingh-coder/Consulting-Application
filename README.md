@@ -35,7 +35,6 @@
 - [React-Bootstrape](#)
 - [Context API](#)
 - [stripe](#)
-- [React-router-dom v-6](#)
 - [Express](#)
 - [MongoDb](#)
 - [Node.js](#)
