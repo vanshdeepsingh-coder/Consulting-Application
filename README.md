@@ -25,14 +25,11 @@
 
 ## Tech Stack
 - [Flutter](https://facebook.github.io/react/)
-- [JavaScripp(ES6)](https://facebook.github.io/react/)
 - [Firebase](https://firebase.google.com/)
 - [Firestore](https://firebase.google.com/docs/firestore)
 - [Firebase Authentication](https://firebase.google.com/docs/auth)
 - [Material-UI](https://material-ui.com/)
-- [Webpack](https://webpack.js.org/)
 - [FileSaver](https://www.npmjs.com/package/file-saver)
-- [React-Bootstrape](#)
 - [Context API](#)
 - [stripe](#)
 - [Express](#)
