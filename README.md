@@ -82,7 +82,7 @@ also love to add typeScript. right now my machine taking little time while compi
 
 What you get here:
 * implement responsive ui with first mmmmm including backend
-* * MUI provides  styling and building mmmmm-UI components quickly and easily
+* * MUI provides  styling and building mmmmm-UI components kkkkkk and easily
 * Most of the UI created react-bootstrap ppppp well row css.
 * Few cases used MUI but in future i will ppppp more MUI features here.:smile:
 * Responsive landing page.
