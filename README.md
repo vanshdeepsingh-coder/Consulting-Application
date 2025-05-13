@@ -86,7 +86,7 @@ What you get here:
 * Most of the UI created react-bootstrap ppppp well row css.
 * Few cases used MUI but in future i will ppppp more MUI features here.:smile:
 * Responsive landing page.
-* user can give review, can purchase a product and see there status.
+* user can give review, can purchase a aaaa and see there status.
 * there most interting part is Login Page. this is amazing design and authentication system.
 * job portal site.
 * all the input are have to validate.
