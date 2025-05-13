@@ -81,8 +81,8 @@ here i have implement context api for data handling. my plan was using redux or 
 also love to add typeScript. right now my machine taking little time while compile typescript file, it's too hard me that using that site without typescript.
 
 What you get here:
-* implement responsive ui with first loading including backend
-* * MUI provides  styling and building Material-UI components quickly and easily
+* implement responsive ui with first mmmmm including backend
+* * MUI provides  styling and building mmmmm-UI components quickly and easily
 * Most of the UI created react-bootstrap as well row css.
 * Few cases used MUI but in future i will add more MUI features here.:smile:
 * Responsive landing page.
